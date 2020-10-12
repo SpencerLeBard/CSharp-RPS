@@ -21,24 +21,31 @@ namespace rockpaperscissors.Controllers
         case "scissors":
           Game();
           break;
-          // case "rock":
-          //   System.Console.WriteLine("You Lose");
-          //   break;
-          // case "paper":
-          //   System.Console.WriteLine("You Lose");
-          //   break;
-          // case "scissors":
-          //   System.Console.WriteLine("You Win");
-          //   break;
+        // case "rock":
+        //   System.Console.WriteLine("You Lose");
+        //   break;
+        // case "paper":
+        //   System.Console.WriteLine("You Lose");
+        //   break;
+        // case "scissors":
+        //   System.Console.WriteLine("You Win");
+        //   break;
+        default:
+          System.Console.WriteLine("Wrong Answer");
+          break;
       }
     }
     private void Game()
     {
       Random rnd = new Random();
-      int number = rnd.Next(1, 10);
-      if (number <= 3)
+      int number = rnd.Next(1, 100);
+      if (number <= 33)
       {
         Console.WriteLine("You Win");
+      }
+      else if (number <= 66)
+      {
+        Console.WriteLine("You Tied");
       }
       else
       {
