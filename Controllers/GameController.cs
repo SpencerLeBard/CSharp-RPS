@@ -8,12 +8,10 @@ namespace rockpaperscissors.Controllers
     {
       GetUserInput();
     }
-
     private void GetUserInput()
     {
       System.Console.WriteLine("Rock, Paper, or Scissors?");
       var input = Console.ReadLine().ToLower();
-
       switch (input)
       {
         case "rock":
@@ -21,15 +19,6 @@ namespace rockpaperscissors.Controllers
         case "scissors":
           Game();
           break;
-        // case "rock":
-        //   System.Console.WriteLine("You Lose");
-        //   break;
-        // case "paper":
-        //   System.Console.WriteLine("You Lose");
-        //   break;
-        // case "scissors":
-        //   System.Console.WriteLine("You Win");
-        //   break;
         default:
           System.Console.WriteLine("Wrong Answer");
           break;
