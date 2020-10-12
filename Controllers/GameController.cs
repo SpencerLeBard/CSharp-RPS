@@ -4,11 +4,6 @@ namespace rockpaperscissors.Controllers
 {
   class GameController
   {
-
-    //properties 
-
-    public string choice { get; private set; }
-
     public void Run()
     {
       GetUserInput();
@@ -22,16 +17,34 @@ namespace rockpaperscissors.Controllers
       switch (input)
       {
         case "rock":
-          System.Console.WriteLine("You Lose");
-          break;
         case "paper":
-          System.Console.WriteLine("You Lose");
-          break;
         case "scissors":
-          System.Console.WriteLine("You Win");
+          Game();
           break;
+          // case "rock":
+          //   System.Console.WriteLine("You Lose");
+          //   break;
+          // case "paper":
+          //   System.Console.WriteLine("You Lose");
+          //   break;
+          // case "scissors":
+          //   System.Console.WriteLine("You Win");
+          //   break;
       }
     }
+    private void Game()
+    {
+      Random rnd = new Random();
+      int number = rnd.Next(1, 10);
+      if (number <= 3)
+      {
+        Console.WriteLine("You Win");
+      }
+      else
+      {
+        Console.WriteLine("You Lose");
+      }
 
+    }
   }
 }
